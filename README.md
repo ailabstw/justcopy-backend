@@ -25,6 +25,14 @@ sudo bash install.sh
 
 `python3 journalist.py`
 
+## Intro
+
+- `journalist.py`: 主要執行程式
+- `DrQA`: 來自[DrQA](https://github.com/facebookresearch/DrQA)，用於搜索相關文章與圖片
+- `lists`: 修改`board.list`來選擇要爬PTT的哪些看板，`hot_board.list`則用來標示特別熱門的看板。
+- `utils`: 爬文、分析、新聞產生...等等模組。
+- `news_data`: 產生新聞所需要的資料，目前以lfs儲存。
+
 ## About Image Searching DataBase
 
 因為一些隱私權問題，我們並沒有直接公開資料庫。
