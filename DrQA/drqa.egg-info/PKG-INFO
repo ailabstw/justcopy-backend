@@ -1,0 +1,815 @@
+Metadata-Version: 1.2
+Name: drqa
+Version: 0.1.0
+Summary: Reading Wikipedia to Answer Open-Domain Questions
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Attribution-NonCommercial 4.0 International
+
+=======================================================================
+
+Creative Commons Corporation ("Creative Commons") is not a law firm and
+does not provide legal services or legal advice. Distribution of
+Creative Commons public licenses does not create a lawyer-client or
+other relationship. Creative Commons makes its licenses and related
+information available on an "as-is" basis. Creative Commons gives no
+warranties regarding its licenses, any material licensed under their
+terms and conditions, or any related information. Creative Commons
+disclaims all liability for damages resulting from their use to the
+fullest extent possible.
+
+Using Creative Commons Public Licenses
+
+Creative Commons public licenses provide a standard set of terms and
+conditions that creators and other rights holders may use to share
+original works of authorship and other material subject to copyright
+and certain other rights specified in the public license below. The
+following considerations are for informational purposes only, are not
+exhaustive, and do not form part of our licenses.
+
+     Considerations for licensors: Our public licenses are
+     intended for use by those authorized to give the public
+     permission to use material in ways otherwise restricted by
+     copyright and certain other rights. Our licenses are
+     irrevocable. Licensors should read and understand the terms
+     and conditions of the license they choose before applying it.
+     Licensors should also secure all rights necessary before
+     applying our licenses so that the public can reuse the
+     material as expected. Licensors should clearly mark any
+     material not subject to the license. This includes other CC-
+     licensed material, or material used under an exception or
+     limitation to copyright. More considerations for licensors:
+	wiki.creativecommons.org/Considerations_for_licensors
+
+     Considerations for the public: By using one of our public
+     licenses, a licensor grants the public permission to use the
+     licensed material under specified terms and conditions. If
+     the licensor's permission is not necessary for any reason--for
+     example, because of any applicable exception or limitation to
+     copyright--then that use is not regulated by the license. Our
+     licenses grant only permissions under copyright and certain
+     other rights that a licensor has authority to grant. Use of
+     the licensed material may still be restricted for other
+     reasons, including because others have copyright or other
+     rights in the material. A licensor may make special requests,
+     such as asking that all changes be marked or described.
+     Although not required by our licenses, you are encouraged to
+     respect those requests where reasonable. More_considerations
+     for the public: 
+	wiki.creativecommons.org/Considerations_for_licensees
+
+=======================================================================
+
+Creative Commons Attribution-NonCommercial 4.0 International Public
+License
+
+By exercising the Licensed Rights (defined below), You accept and agree
+to be bound by the terms and conditions of this Creative Commons
+Attribution-NonCommercial 4.0 International Public License ("Public
+License"). To the extent this Public License may be interpreted as a
+contract, You are granted the Licensed Rights in consideration of Your
+acceptance of these terms and conditions, and the Licensor grants You
+such rights in consideration of benefits the Licensor receives from
+making the Licensed Material available under these terms and
+conditions.
+
+
+Section 1 -- Definitions.
+
+  a. Adapted Material means material subject to Copyright and Similar
+     Rights that is derived from or based upon the Licensed Material
+     and in which the Licensed Material is translated, altered,
+     arranged, transformed, or otherwise modified in a manner requiring
+     permission under the Copyright and Similar Rights held by the
+     Licensor. For purposes of this Public License, where the Licensed
+     Material is a musical work, performance, or sound recording,
+     Adapted Material is always produced where the Licensed Material is
+     synched in timed relation with a moving image.
+
+  b. Adapter's License means the license You apply to Your Copyright
+     and Similar Rights in Your contributions to Adapted Material in
+     accordance with the terms and conditions of this Public License.
+
+  c. Copyright and Similar Rights means copyright and/or similar rights
+     closely related to copyright including, without limitation,
+     performance, broadcast, sound recording, and Sui Generis Database
+     Rights, without regard to how the rights are labeled or
+     categorized. For purposes of this Public License, the rights
+     specified in Section 2(b)(1)-(2) are not Copyright and Similar
+     Rights.
+  d. Effective Technological Measures means those measures that, in the
+     absence of proper authority, may not be circumvented under laws
+     fulfilling obligations under Article 11 of the WIPO Copyright
+     Treaty adopted on December 20, 1996, and/or similar international
+     agreements.
+
+  e. Exceptions and Limitations means fair use, fair dealing, and/or
+     any other exception or limitation to Copyright and Similar Rights
+     that applies to Your use of the Licensed Material.
+
+  f. Licensed Material means the artistic or literary work, database,
+     or other material to which the Licensor applied this Public
+     License.
+
+  g. Licensed Rights means the rights granted to You subject to the
+     terms and conditions of this Public License, which are limited to
+     all Copyright and Similar Rights that apply to Your use of the
+     Licensed Material and that the Licensor has authority to license.
+
+  h. Licensor means the individual(s) or entity(ies) granting rights
+     under this Public License.
+
+  i. NonCommercial means not primarily intended for or directed towards
+     commercial advantage or monetary compensation. For purposes of
+     this Public License, the exchange of the Licensed Material for
+     other material subject to Copyright and Similar Rights by digital
+     file-sharing or similar means is NonCommercial provided there is
+     no payment of monetary compensation in connection with the
+     exchange.
+
+  j. Share means to provide material to the public by any means or
+     process that requires permission under the Licensed Rights, such
+     as reproduction, public display, public performance, distribution,
+     dissemination, communication, or importation, and to make material
+     available to the public including in ways that members of the
+     public may access the material from a place and at a time
+     individually chosen by them.
+
+  k. Sui Generis Database Rights means rights other than copyright
+     resulting from Directive 96/9/EC of the European Parliament and of
+     the Council of 11 March 1996 on the legal protection of databases,
+     as amended and/or succeeded, as well as other essentially
+     equivalent rights anywhere in the world.
+
+  l. You means the individual or entity exercising the Licensed Rights
+     under this Public License. Your has a corresponding meaning.
+
+
+Section 2 -- Scope.
+
+  a. License grant.
+
+       1. Subject to the terms and conditions of this Public License,
+          the Licensor hereby grants You a worldwide, royalty-free,
+          non-sublicensable, non-exclusive, irrevocable license to
+          exercise the Licensed Rights in the Licensed Material to:
+
+            a. reproduce and Share the Licensed Material, in whole or
+               in part, for NonCommercial purposes only; and
+
+            b. produce, reproduce, and Share Adapted Material for
+               NonCommercial purposes only.
+
+       2. Exceptions and Limitations. For the avoidance of doubt, where
+          Exceptions and Limitations apply to Your use, this Public
+          License does not apply, and You do not need to comply with
+          its terms and conditions.
+
+       3. Term. The term of this Public License is specified in Section
+          6(a).
+
+       4. Media and formats; technical modifications allowed. The
+          Licensor authorizes You to exercise the Licensed Rights in
+          all media and formats whether now known or hereafter created,
+          and to make technical modifications necessary to do so. The
+          Licensor waives and/or agrees not to assert any right or
+          authority to forbid You from making technical modifications
+          necessary to exercise the Licensed Rights, including
+          technical modifications necessary to circumvent Effective
+          Technological Measures. For purposes of this Public License,
+          simply making modifications authorized by this Section 2(a)
+          (4) never produces Adapted Material.
+
+       5. Downstream recipients.
+
+            a. Offer from the Licensor -- Licensed Material. Every
+               recipient of the Licensed Material automatically
+               receives an offer from the Licensor to exercise the
+               Licensed Rights under the terms and conditions of this
+               Public License.
+
+            b. No downstream restrictions. You may not offer or impose
+               any additional or different terms or conditions on, or
+               apply any Effective Technological Measures to, the
+               Licensed Material if doing so restricts exercise of the
+               Licensed Rights by any recipient of the Licensed
+               Material.
+
+       6. No endorsement. Nothing in this Public License constitutes or
+          may be construed as permission to assert or imply that You
+          are, or that Your use of the Licensed Material is, connected
+          with, or sponsored, endorsed, or granted official status by,
+          the Licensor or others designated to receive attribution as
+          provided in Section 3(a)(1)(A)(i).
+
+  b. Other rights.
+
+       1. Moral rights, such as the right of integrity, are not
+          licensed under this Public License, nor are publicity,
+          privacy, and/or other similar personality rights; however, to
+          the extent possible, the Licensor waives and/or agrees not to
+          assert any such rights held by the Licensor to the limited
+          extent necessary to allow You to exercise the Licensed
+          Rights, but not otherwise.
+
+       2. Patent and trademark rights are not licensed under this
+          Public License.
+
+       3. To the extent possible, the Licensor waives any right to
+          collect royalties from You for the exercise of the Licensed
+          Rights, whether directly or through a collecting society
+          under any voluntary or waivable statutory or compulsory
+          licensing scheme. In all other cases the Licensor expressly
+          reserves any right to collect such royalties, including when
+          the Licensed Material is used other than for NonCommercial
+          purposes.
+
+
+Section 3 -- License Conditions.
+
+Your exercise of the Licensed Rights is expressly made subject to the
+following conditions.
+
+  a. Attribution.
+
+       1. If You Share the Licensed Material (including in modified
+          form), You must:
+
+            a. retain the following if it is supplied by the Licensor
+               with the Licensed Material:
+
+                 i. identification of the creator(s) of the Licensed
+                    Material and any others designated to receive
+                    attribution, in any reasonable manner requested by
+                    the Licensor (including by pseudonym if
+                    designated);
+
+                ii. a copyright notice;
+
+               iii. a notice that refers to this Public License;
+
+                iv. a notice that refers to the disclaimer of
+                    warranties;
+
+                 v. a URI or hyperlink to the Licensed Material to the
+                    extent reasonably practicable;
+
+            b. indicate if You modified the Licensed Material and
+               retain an indication of any previous modifications; and
+
+            c. indicate the Licensed Material is licensed under this
+               Public License, and include the text of, or the URI or
+               hyperlink to, this Public License.
+
+       2. You may satisfy the conditions in Section 3(a)(1) in any
+          reasonable manner based on the medium, means, and context in
+          which You Share the Licensed Material. For example, it may be
+          reasonable to satisfy the conditions by providing a URI or
+          hyperlink to a resource that includes the required
+          information.
+
+       3. If requested by the Licensor, You must remove any of the
+          information required by Section 3(a)(1)(A) to the extent
+          reasonably practicable.
+
+       4. If You Share Adapted Material You produce, the Adapter's
+          License You apply must not prevent recipients of the Adapted
+          Material from complying with this Public License.
+
+
+Section 4 -- Sui Generis Database Rights.
+
+Where the Licensed Rights include Sui Generis Database Rights that
+apply to Your use of the Licensed Material:
+
+  a. for the avoidance of doubt, Section 2(a)(1) grants You the right
+     to extract, reuse, reproduce, and Share all or a substantial
+     portion of the contents of the database for NonCommercial purposes
+     only;
+
+  b. if You include all or a substantial portion of the database
+     contents in a database in which You have Sui Generis Database
+     Rights, then the database in which You have Sui Generis Database
+     Rights (but not its individual contents) is Adapted Material; and
+
+  c. You must comply with the conditions in Section 3(a) if You Share
+     all or a substantial portion of the contents of the database.
+
+For the avoidance of doubt, this Section 4 supplements and does not
+replace Your obligations under this Public License where the Licensed
+Rights include other Copyright and Similar Rights.
+
+
+Section 5 -- Disclaimer of Warranties and Limitation of Liability.
+
+  a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
+     EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
+     AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
+     ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
+     IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
+     WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+     PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
+     ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
+     KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT
+     ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.
+
+  b. TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE
+     TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
+     NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
+     INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
+     COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
+     USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
+     ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
+     DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR
+     IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.
+
+  c. The disclaimer of warranties and limitation of liability provided
+     above shall be interpreted in a manner that, to the extent
+     possible, most closely approximates an absolute disclaimer and
+     waiver of all liability.
+
+
+Section 6 -- Term and Termination.
+
+  a. This Public License applies for the term of the Copyright and
+     Similar Rights licensed here. However, if You fail to comply with
+     this Public License, then Your rights under this Public License
+     terminate automatically.
+
+  b. Where Your right to use the Licensed Material has terminated under
+     Section 6(a), it reinstates:
+
+       1. automatically as of the date the violation is cured, provided
+          it is cured within 30 days of Your discovery of the
+          violation; or
+
+       2. upon express reinstatement by the Licensor.
+
+     For the avoidance of doubt, this Section 6(b) does not affect any
+     right the Licensor may have to seek remedies for Your violations
+     of this Public License.
+
+  c. For the avoidance of doubt, the Licensor may also offer the
+     Licensed Material under separate terms or conditions or stop
+     distributing the Licensed Material at any time; however, doing so
+     will not terminate this Public License.
+
+  d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
+     License.
+
+
+Section 7 -- Other Terms and Conditions.
+
+  a. The Licensor shall not be bound by any additional or different
+     terms or conditions communicated by You unless expressly agreed.
+
+  b. Any arrangements, understandings, or agreements regarding the
+     Licensed Material not stated herein are separate from and
+     independent of the terms and conditions of this Public License.
+
+
+Section 8 -- Interpretation.
+
+  a. For the avoidance of doubt, this Public License does not, and
+     shall not be interpreted to, reduce, limit, restrict, or impose
+     conditions on any use of the Licensed Material that could lawfully
+     be made without permission under this Public License.
+
+  b. To the extent possible, if any provision of this Public License is
+     deemed unenforceable, it shall be automatically reformed to the
+     minimum extent necessary to make it enforceable. If the provision
+     cannot be reformed, it shall be severed from this Public License
+     without affecting the enforceability of the remaining terms and
+     conditions.
+
+  c. No term or condition of this Public License will be waived and no
+     failure to comply consented to unless expressly agreed to by the
+     Licensor.
+
+  d. Nothing in this Public License constitutes or may be interpreted
+     as a limitation upon, or waiver of, any privileges and immunities
+     that apply to the Licensor or You, including from the legal
+     processes of any jurisdiction or authority.
+
+=======================================================================
+
+Creative Commons is not a party to its public
+licenses. Notwithstanding, Creative Commons may elect to apply one of
+its public licenses to material it publishes and in those instances
+will be considered the “Licensor.” The text of the Creative Commons
+public licenses is dedicated to the public domain under the CC0 Public
+Domain Dedication. Except for the limited purpose of indicating that
+material is shared under a Creative Commons public license or as
+otherwise permitted by the Creative Commons policies published at
+creativecommons.org/policies, Creative Commons does not authorize the
+use of the trademark "Creative Commons" or any other trademark or logo
+of Creative Commons without its prior written consent including,
+without limitation, in connection with any unauthorized modifications
+to any of its public licenses or any other arrangements,
+understandings, or agreements concerning use of licensed material. For
+the avoidance of doubt, this paragraph does not form part of the
+public licenses.
+
+Creative Commons may be contacted at creativecommons.org.
+
+
+Description: # DrQA
+        This is a PyTorch implementation of the DrQA system described in the ACL 2017 paper [Reading Wikipedia to Answer Open-Domain Questions](https://arxiv.org/abs/1704.00051).
+        
+        ## Quick Links
+        
+        - [About](#machine-reading-at-scale)
+        - [Demo](#quick-start-demo)
+        - [Installation](#installing-drqa)
+        - [Components](#drqa-components)
+        
+        ## Machine Reading at Scale
+        
+        <p align="center"><img width="70%" src="img/drqa.png" /></p>
+        
+        DrQA is a system for reading comprehension applied to open-domain question answering. In particular, DrQA is targeted at the task of "machine reading at scale" (MRS). In this setting, we are searching for an answer to a question in a potentially very large corpus of unstructured documents (that may not be redundant). Thus the system has to combine the challenges of document retrieval (finding the relevant documents) with that of machine comprehension of text (identifying the answers from those documents).
+        
+        Our experiments with DrQA focus on answering factoid questions while using Wikipedia as the unique knowledge source for documents. Wikipedia is a well-suited source of large-scale, rich, detailed information. In order to answer any question, one must first retrieve the few potentially relevant articles among more than 5 million, and then scan them carefully to identify the answer.
+        
+        Note that DrQA treats Wikipedia as a generic collection of articles and does not rely on its internal graph structure. As a result, **_DrQA can be straightforwardly applied to any collection of documents_**, as described in the retriever [README](scripts/retriever/README.md).
+        
+        This repository includes code, data, and pre-trained models for processing and querying Wikipedia as described in the paper -- see [Trained Models and Data](#trained-models-and-data). We also list several different datasets for evaluation, see [QA Datasets](#qa-datasets). Note that this work is a refactored and more efficient version of the original code. Reproduction numbers are very similar but not exact.
+        
+        ## Quick Start: Demo
+        
+        [Install](#installing-drqa) DrQA and [download](#trained-models-and-data) our models to start asking open-domain questions!
+        
+        Run `python scripts/pipeline/interactive.py` to drop into an interactive session. For each question, the top span and the Wikipedia paragraph it came from are returned.
+        
+        ```
+        >>> process('What is question answering?')
+        
+        Top Predictions:
+        +------+----------------------------------------------------------------------------------------------------------+--------------------+--------------+-----------+
+        | Rank |                                                  Answer                                                  |        Doc         | Answer Score | Doc Score |
+        +------+----------------------------------------------------------------------------------------------------------+--------------------+--------------+-----------+
+        |  1   | a computer science discipline within the fields of information retrieval and natural language processing | Question answering |    1917.8    |   327.89  |
+        +------+----------------------------------------------------------------------------------------------------------+--------------------+--------------+-----------+
+        
+        Contexts:
+        [ Doc = Question answering ]
+        Question Answering (QA) is a computer science discipline within the fields of
+        information retrieval and natural language processing (NLP), which is
+        concerned with building systems that automatically answer questions posed by
+        humans in a natural language.
+        ```
+        
+        ```
+        >>> process('What is the answer to life, the universe, and everything?')
+        
+        Top Predictions:
+        +------+--------+---------------------------------------------------+--------------+-----------+
+        | Rank | Answer |                        Doc                        | Answer Score | Doc Score |
+        +------+--------+---------------------------------------------------+--------------+-----------+
+        |  1   |   42   | Phrases from The Hitchhiker's Guide to the Galaxy |    47242     |   141.26  |
+        +------+--------+---------------------------------------------------+--------------+-----------+
+        
+        Contexts:
+        [ Doc = Phrases from The Hitchhiker's Guide to the Galaxy ]
+        The number 42 and the phrase, "Life, the universe, and everything" have
+        attained cult status on the Internet. "Life, the universe, and everything" is
+        a common name for the off-topic section of an Internet forum and the phrase is
+        invoked in similar ways to mean "anything at all". Many chatbots, when asked
+        about the meaning of life, will answer "42". Several online calculators are
+        also programmed with the Question. Google Calculator will give the result to
+        "the answer to life the universe and everything" as 42, as will Wolfram's
+        Computational Knowledge Engine. Similarly, DuckDuckGo also gives the result of
+        "the answer to the ultimate question of life, the universe and everything" as
+        42. In the online community Second Life, there is a section on a sim called
+        43. "42nd Life." It is devoted to this concept in the book series, and several
+        attempts at recreating Milliways, the Restaurant at the End of the Universe, were made.
+        ```
+        
+        ```
+        >>> process('Who was the winning pitcher in the 1956 World Series?')
+        
+        Top Predictions:
+        +------+------------+------------------+--------------+-----------+
+        | Rank |   Answer   |       Doc        | Answer Score | Doc Score |
+        +------+------------+------------------+--------------+-----------+
+        |  1   | Don Larsen | New York Yankees |  4.5059e+06  |   278.06  |
+        +------+------------+------------------+--------------+-----------+
+        
+        Contexts:
+        [ Doc = New York Yankees ]
+        In 1954, the Yankees won over 100 games, but the Indians took the pennant with
+        an AL record 111 wins; 1954 was famously referred to as "The Year the Yankees
+        Lost the Pennant". In , the Dodgers finally beat the Yankees in the World
+        Series, after five previous Series losses to them, but the Yankees came back
+        strong the next year. On October 8, 1956, in Game Five of the 1956 World
+        Series against the Dodgers, pitcher Don Larsen threw the only perfect game in
+        World Series history, which remains the only perfect game in postseason play
+        and was the only no-hitter of any kind to be pitched in postseason play until
+        Roy Halladay pitched a no-hitter on October 6, 2010.
+        ```
+        
+        Try some of your own! Of course, DrQA might provide alternative facts, so enjoy the ride.
+        
+        ## Installing DrQA
+        
+        _Setting up DrQA is easy!_
+        
+        DrQA requires Linux/OSX and Python 3.5 or higher. It also requires installing [PyTorch](http://pytorch.org/). Its other dependencies are listed in requirements.txt. CUDA is strongly recommended for speed, but not necessary.
+        
+        Run the following commands to clone the repository and install DrQA:
+        
+        ```bash
+        git clone https://github.com/facebookresearch/DrQA.git
+        cd DrQA; pip install -r requirements.txt; python setup.py develop
+        ```
+        
+        Note: requirements.txt includes a subset of all the possible required packages. Depending on what you want to run, you might need to install an extra package (e.g. spacy).
+        
+        If you use the CoreNLPTokenizer or SpacyTokenizer you also need to download the Stanford CoreNLP jars and spaCy `en` model, respectively. If you use Stanford CoreNLP, have the jars in your java `CLASSPATH` environment variable, or set the path programmatically with:
+        
+        ```python
+        import drqa.tokenizers
+        drqa.tokenizers.set_default('corenlp_classpath', '/your/corenlp/classpath/*')
+        ```
+        
+        **IMPORTANT: The default [tokenizer](#tokenizers) is CoreNLP so you will need that in your `CLASSPATH` to run the README examples.**
+        
+        Ex: `export CLASSPATH=$CLASSPATH:/path/to/corenlp/download/*`.
+        
+        If you do not already have a CoreNLP [download](https://stanfordnlp.github.io/CoreNLP/index.html#download) you can run:
+        
+        ```bash
+        ./install_corenlp.sh
+        ```
+        
+        Verify that it runs:
+        ```python
+        from drqa.tokenizers import CoreNLPTokenizer
+        tok = CoreNLPTokenizer()
+        tok.tokenize('hello world').words()  # Should complete immediately
+        ```
+        
+        For convenience, the Document Reader, Retriever, and Pipeline modules will try to load default models if no model argument is given. See below for downloading these models.
+        
+        ### Trained Models and Data
+        
+        To download all provided trained models and data for Wikipedia question answering, run:
+        
+        ```bash
+        ./download.sh
+        ```
+        
+        _Warning: this downloads a 7.5GB tarball (25GB untarred) and will take some time._
+        
+        This stores the data in `data/` at the file paths specified in the various modules' defaults. This top-level directory can be modified by setting a `DRQA_DATA` environment variable to point to somewhere else.
+        
+        Default directory structure (see [embeddings](scripts/reader/README.md#note-on-word-embeddings) for more info on additional downloads for training):
+        ```
+        DrQA
+        ├── data (or $DRQA_DATA)
+            ├── datasets
+            │   ├── SQuAD-v1.1-<train/dev>.<txt/json>
+            │   ├── WebQuestions-<train/test>.txt
+            │   ├── freebase-entities.txt
+            │   ├── CuratedTrec-<train/test>.txt
+            │   └── WikiMovies-<train/test/entities>.txt
+            ├── reader
+            │   ├── multitask.mdl
+            │   └── single.mdl
+            └── wikipedia
+                ├── docs.db
+                └── docs-tfidf-ngram=2-hash=16777216-tokenizer=simple.npz
+        ```
+        
+        Default model paths for the different modules can also be modified programmatically in the code, e.g.:
+        
+        ```python
+        import drqa.reader
+        drqa.reader.set_default('model', '/path/to/model')
+        reader = drqa.reader.Predictor()  # Default model loaded for prediction
+        ```
+        
+        #### Document Retriever
+        
+        TF-IDF model using Wikipedia (unigrams and bigrams, 2^24 bins, simple tokenization), evaluated on multiple datasets (test sets, dev set for SQuAD):
+        
+        | Model | SQuAD P@5 | CuratedTREC P@5 | WebQuestions P@5 | WikiMovies P@5 | Size |
+        | :---: | :-------: | :-------------: | :--------------: | :------------: | :---: |
+        | [TF-IDF model](https://s3.amazonaws.com/fair-data/drqa/docs-tfidf-ngram%3D2-hash%3D16777216-tokenizer%3Dsimple.npz.gz) | 78.0 | 87.6 | 75.0 | 69.8 | ~13GB |
+        
+        _P@5 here is defined as the % of questions for which the answer segment appears in one of the top 5 documents_.
+        
+        #### Document Reader
+        
+        Model trained only on SQuAD, evaluated in the SQuAD setting:
+        
+        | Model | SQuAD Dev EM | SQuAD Dev F1 | Size |
+        | :---: | :-----------:| :----------: | :--: |
+        | [Single model](https://s3.amazonaws.com/fair-data/drqa/single.mdl) | 69.4 | 78.9 | ~130MB |
+        
+        Model trained with distant supervision without NER/POS/lemma features, evaluated on multiple datasets (test sets, dev set for SQuAD) in the full Wikipedia setting:
+        
+        | Model | SQuAD EM | CuratedTREC EM | WebQuestions EM | WikiMovies EM | Size |
+        | :---: | :------: | :------------: | :-------------: | :-----------: | :--:
+        | [Multitask model](https://s3.amazonaws.com/fair-data/drqa/multitask.mdl) | 29.5 | 27.2 | 18.5 | 36.9 | ~270MB |
+        
+        #### Wikipedia
+        
+        Our full-scale experiments were conducted on the 2016-12-21 dump of English Wikipedia. The dump was processed with the [WikiExtractor](https://github.com/attardi/wikiextractor) and filtered for internal disambiguation, list, index, and outline pages (pages that are typically just links). We store the documents in an sqlite database for which `drqa.retriever.DocDB` provides an interface.
+        
+        | Database | Num. Documents | Size |
+        | :------: | :------------: | :-----------------: |
+        | [Wikipedia](https://s3.amazonaws.com/fair-data/drqa/docs.db.gz) | 5,075,182 | ~13GB |
+        
+        #### QA Datasets
+        
+        The datasets used for DrQA training and evaluation can be found here:
+        
+        - SQuAD: [train](https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v1.1.json), [dev](https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v1.1.json)
+        - WebQuestions: [train](http://nlp.stanford.edu/static/software/sempre/release-emnlp2013/lib/data/webquestions/dataset_11/webquestions.examples.train.json.bz2), [test](http://nlp.stanford.edu/static/software/sempre/release-emnlp2013/lib/data/webquestions/dataset_11/webquestions.examples.test.json.bz2), [entities](https://s3.amazonaws.com/fair-data/drqa/freebase-entities.txt.gz)
+        - WikiMovies: [train/test/entities](https://s3.amazonaws.com/fair-data/drqa/WikiMovies.tar.gz)
+        (Rehosted in expected format from https://research.fb.com/downloads/babi/)
+        - CuratedTrec: [train/test](https://s3.amazonaws.com/fair-data/drqa/CuratedTrec.tar.gz)
+        (Rehosted in expected format from https://github.com/brmson/dataset-factoid-curated)
+        
+        ##### Format A
+        
+        The `retriever/eval.py`, `pipeline/eval.py`, and `distant/generate.py` scripts expect the datasets as a `.txt` file where each line is a JSON encoded QA pair, like so:
+        
+        ```python
+        '{"question": "q1", "answer": ["a11", ..., "a1i"]}'
+        ...
+        '{"question": "qN", "answer": ["aN1", ..., "aNi"]}'
+        ```
+        
+        Scripts to convert SQuAD and WebQuestions to this format are included in `scripts/convert`. This is automatically done in `download.sh`.
+        
+        ##### Format B
+        
+        The `reader` directory scripts expect the datasets as a `.json` file where the data is arranged like SQuAD:
+        
+        ```
+        file.json
+        ├── "data"
+        │   └── [i]
+        │       ├── "paragraphs"
+        │       │   └── [j]
+        │       │       ├── "context": "paragraph text"
+        │       │       └── "qas"
+        │       │           └── [k]
+        │       │               ├── "answers"
+        │       │               │   └── [l]
+        │       │               │       ├── "answer_start": N
+        │       │               │       └── "text": "answer"
+        │       │               ├── "id": "<uuid>"
+        │       │               └── "question": "paragraph question?"
+        │       └── "title": "document id"
+        └── "version": 1.1
+        ```
+        
+        ##### Entity lists
+        
+        Some datasets have (potentially large) candidate lists for selecting answers. For example, WikiMovies' answers are OMDb entries while WebQuestions is based on Freebase. If we have known candidates, we can impose that all predicted answers must be in this list by discarding any higher scoring spans that are not.
+        
+        ## DrQA Components
+        
+        ### Document Retriever
+        
+        DrQA is not tied to any specific type of retrieval system -- as long as it effectively narrows the search space and focuses on relevant documents.
+        
+        Following classical QA systems, we include an efficient (non-machine learning) document retrieval system based on sparse, TF-IDF weighted bag-of-word vectors. We use bags of hashed n-grams (here, unigrams and bigrams).
+        
+        To see how to build your own such model on new documents, see the retriever [README](scripts/retriever/README.md).
+        
+        To interactively query Wikipedia:
+        
+        ```bash
+        python scripts/retriever/interactive.py --model /path/to/model
+        ```
+        
+        If `model` is left out our [default model](#document-retriever-1) will be used (assuming it was [downloaded](#installing-drqa)).
+        
+        To evaluate the retriever accuracy (% match in top 5) on a dataset:
+        
+        ```bash
+        python scripts/retriever/eval.py /path/to/format/A/dataset.txt --model /path/to/model
+        ```
+        
+        ### Document Reader
+        
+        DrQA's Document Reader is a multi-layer recurrent neural network machine comprehension model trained to do extractive question answering. That is, the model tries to find the answer to any question as a text span in one of the returned documents.
+        
+        The Document Reader was inspired by, and primarily trained on, the [SQuAD](https://arxiv.org/abs/1606.05250) dataset. It can also be used standalone on such SQuAD-like tasks where a specific context is supplied with the question, the answer to which is contained in the context.
+        
+        To see how to train the Document Reader on SQuAD, see the reader [README](scripts/reader/README.md).
+        
+        To interactively ask questions about text with a trained model:
+        
+        ```bash
+        python scripts/reader/interactive.py --model /path/to/model
+        ```
+        
+        Again, here `model` is optional; a [default model](#document-reader-1) will be used if it is left out.
+        
+        To run model predictions on a dataset:
+        
+        ```bash
+        python scripts/reader/predict.py /path/to/format/B/dataset.json --model /path/to/model
+        ```
+        
+        ### DrQA Pipeline
+        
+        The full system is linked together in `drqa.pipeline.DrQA`.
+        
+        To interactively ask questions using the full DrQA:
+        
+        ```bash
+        python scripts/pipeline/interactive.py
+        ```
+        
+        Optional arguments:
+        ```
+        --reader-model    Path to trained Document Reader model.
+        --retriever-model Path to Document Retriever model (tfidf).
+        --doc-db          Path to Document DB.
+        --tokenizers      String option specifying tokenizer type to use (e.g. 'corenlp').
+        --candidate-file  List of candidates to restrict predictions to, one candidate per line.
+        --no-cuda         Use CPU only.
+        --gpu             Specify GPU device id to use.
+        ```
+        
+        To run predictions on a dataset:
+        
+        ```bash
+        python scripts/pipeline/predict.py /path/to/format/A/dataset.txt
+        ```
+        
+        Optional arguments:
+        ```
+        --out-dir             Directory to write prediction file to (<dataset>-<model>-pipeline.preds).
+        --reader-model        Path to trained Document Reader model.
+        --retriever-model     Path to Document Retriever model (tfidf).
+        --doc-db              Path to Document DB.
+        --embedding-file      Expand dictionary to use all pretrained embeddings in this file (e.g. all glove vectors to minimize UNKs at test time).
+        --candidate-file      List of candidates to restrict predictions to, one candidate per line.
+        --n-docs              Number of docs to retrieve per query.
+        --top-n               Number of predictions to make per query.
+        --tokenizer           String option specifying tokenizer type to use (e.g. 'corenlp').
+        --no-cuda             Use CPU only.
+        --gpu                 Specify GPU device id to use.
+        --parallel            Use data parallel (split across GPU devices).
+        --num-workers         Number of CPU processes (for tokenizing, etc).
+        --batch-size          Document paragraph batching size (Reduce in case of GPU OOM).
+        --predict-batch-size  Question batching size (Reduce in case of CPU OOM).
+        ```
+        
+        ### Distant Supervision (DS)
+        
+        DrQA's performance improves significantly in the full-setting when provided with distantly supervised data from additional datasets. Given question-answer pairs but no supporting context, we can use string matching heuristics to automatically associate paragraphs to these training examples.
+        
+        >Question: What U.S. state’s motto is “Live free or Die”?
+        >
+        >Answer: New Hampshire
+        >
+        >DS Document: Live Free or Die
+         **“Live Free or Die”** is the official **motto** of the **U.S. state** of _**New Hampshire**_, adopted by the **state** in 1945. It is possibly the best-known of all state mottos, partly because it conveys an assertive independence historically found in American political philosophy and partly because of its contrast to the milder sentiments found in other state mottos.
+        
+        The `scripts/distant` directory contains code to generate and inspect such distantly supervised data.
+        
+        ### Tokenizers
+        
+        We provide a number of different tokenizer options for convenience. Each has its own pros/cons based on how many dependencies it requires, overhead for running it, speed, and performance. For our reported experiments we used CoreNLP (but results are all similar).
+        
+        Available tokenizers:
+        - _CoreNLPTokenizer_: Uses [Stanford CoreNLP](https://stanfordnlp.github.io/CoreNLP/) (option: 'corenlp'). We used v3.7.0. Requires Java 8.
+        - _SpacyTokenizer_: Uses [spaCy](https://spacy.io/) (option: 'spacy').
+        - _RegexpTokenizer_: Custom regex-based PTB-style tokenizer (option: 'regexp').
+        - _SimpleTokenizer_: Basic alpha-numeric/non-whitespace tokenizer (option: 'simple').
+        
+        See the [list](drqa/tokenizers/__init__.py) of mappings between string option names and tokenizer classes.
+        
+        ## Citation
+        
+        Please cite the ACL paper if you use DrQA in your work:
+        
+        ```
+        @inproceedings{chen2017reading,
+          title={Reading {Wikipedia} to Answer Open-Domain Questions},
+          author={Chen, Danqi and Fisch, Adam and Weston, Jason and Bordes, Antoine},
+          booktitle={Association for Computational Linguistics (ACL)},
+          year={2017}
+        }
+        ```
+        
+        ## Connection with ParlAI
+        
+        This implementation of the DrQA Document Reader is closely related to the one found in [ParlAI](https://github.com/facebookresearch/ParlAI). Here, however, the work is extended to interact with the Document Retriever in the open-domain setting. It is also somewhat more efficient to train and achieves slightly better performance given that the ParlAI API restrictions are lifted (e.g. with respect to preprocessing, answer spans, etc).
+        
+        We plan to consolidate this model into the ParlAI interface as well, so that the reader can be interchangeably trained here or multitasked on many datasets with ParlAI.
+        
+        ## License
+        DrQA has a CC-BY-NC license.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.5

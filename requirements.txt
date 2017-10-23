@@ -1,0 +1,16 @@
+numpy
+scikit-learn
+termcolor
+regex
+tqdm
+prettytable
+scipy
+nltk
+pexpect
+requests
+schedule
+metadata_parser
+networkx
+jieba
+tensorflow
+torchvision
