@@ -1,0 +1,12 @@
+{
+    "summary_num": 2,
+    "comment_num": 5,
+    "title": "「{comment_1}」！網路提問，驚呆百萬人。",
+    "paragraphs": [
+                    "「{comment_4}」。是什麼樣的問題，讓鄉民們產生這樣的回應？",
+                    "今日稍早，{author}在國內知名論壇批踢踢，貼出一則問題，標題斗大寫著：「{title}」，詢問網友意見。",
+                    "文章提到：「{summary_1}」，還說：「{summary_2}」，",
+                    "面對這樣的問題，眾鄉民群起回應，紛紛表示：「{comment_1}」、「{comment_2}」或著「{comment_3}」，掀起一波討論。",
+                    "一則提問意外引起熱烈討論，也難怪網友{comment_by_2}會有感而發：「{comment_summary_2}」。"
+    ]
+}

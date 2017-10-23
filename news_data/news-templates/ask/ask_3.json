@@ -1,0 +1,11 @@
+{
+    "summary_num": 1,
+    "comment_num" : 5, 
+    "title": "{title}？鄉民感慨留言：「{comment_1}」。",
+    "paragraphs": [
+                    "{title}？這是國內知名論壇PTT的最新熱門話題，由帳號為{author}的網友提出。文章提到，{summary_1}，徵求鄉民提供意見。",
+                    "對此，有些鄉民表示：「{comment_2}」、「{comment_3}」，也有如{comment_by_1}的鄉民認真回覆：「{comment_summary_1}」。",
+                    "究竟什麼才是原PO疑惑的解答呢？或許{comment_by_2}所說的，「{comment_summary_2}」，是其中一種可能。",
+                    "網路熱門話題，記者快抄與你一同討論。"
+    ]
+}

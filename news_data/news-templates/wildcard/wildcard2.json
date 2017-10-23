@@ -1,0 +1,11 @@
+{
+    "summary_num" : 2,
+    "comment_num" : 5,
+    "Image" : 1,
+    "title": "{title}",
+    "paragraphs":[
+        "[即時新聞/記者快抄] {summary_1}。",
+        "網友將相關訊息貼到《批踢踢實業坊》{board}，引起熱議",
+        "有人直呼「{comment_1}」、「{comment_2}」，網友說「{comment_3}」，「{comment_4}」。原PO說，「{summary_2}」，也有網友認為，「{comment_5}」"
+    ]
+}

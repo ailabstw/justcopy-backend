@@ -1,0 +1,11 @@
+{
+"summary_num" : 1, 
+"comment_num" : 5,
+"title": "大哉問！「{title}」，引爆討論熱潮。",
+"paragraphs":[
+            "熱鬧的PTT八卦版，今日出現一篇標題寫著「{title}」的問卦文章，吸引眾網友紛紛發表意見。",
+            "這位名為{author}的網友說，「{summary_1}」，詢問網友建議。",
+            "鄉民控制不住對這個問題的回答慾望，積極回覆，其中許多人表示：「{comment_1}」、「{comment_2}」或是「{comment_3}」，而也有鄉民坦言內心想法：「{comment_special_1}」、「{comment_special_2}」，令人激賞。",
+            "您心目中的解答，是什麼呢？"
+    ]
+}

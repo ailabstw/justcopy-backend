@@ -1,0 +1,11 @@
+{
+    "summary_num": 1,
+    "comment_num": 5,
+    "title": "網友{author}的提問引網路世界注目。",
+    "paragraphs": [
+                "隨口一問，引網友瘋狂討論？在{date}，時間{time}，一句「{title}」當標題，內容寫著：「{summary_1}」，這樣的一篇文章，竟吸引不少人爭相留言。",
+                "不但有類似「{comment_1}」、「{comment_2}」的回應，如「{comment_3}」的評論也有出現。",
+                "網友{comment_by_1}則特別回應：「{comment_summary_1}」，增加文章討論面向。",
+                "而另一位網友{comment_by_2}也有感而發，留言表示：「{comment_summary_2}」，相當有意思。"
+    ]
+}

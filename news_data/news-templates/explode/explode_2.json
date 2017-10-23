@@ -1,0 +1,11 @@
+{
+    "summary_num" : 3,
+    "comment_num" : 4,
+    "title": "網友都說：「{comment_1}」！熱門爆料文章，你看過了嗎？",
+    "paragraphs": [
+        "{date}，在台灣時間的{time}，一篇名為「{title}」的文章指出：「{summary_1}」。",
+        "除此之外，這位網路帳號名為{author}的文章作者還說，「{summary_2}，{summary_3}」。",
+        "這樣的內容讓網友議論紛紛，有網友便說：「{comment_2}」，也有人覺得這篇文章「{comment_3}」。而網友{comment_by_1}則提出見解，認為這件事情「{comment_summary_1}」。",
+        "爆卦作者請善用不自殺聲明，記者快抄關心您。"
+    ]
+}

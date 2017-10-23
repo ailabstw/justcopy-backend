@@ -1,0 +1,12 @@
+{
+    "summary_num": 2,
+    "comment_num": 4,
+    "title": "網民驚呼：「{comment_1}」！你一定要看。",
+    "paragraphs": [
+        "「{title}」，看到這樣的標題，是否已經引起你的興趣？",
+        "網友{author}稍早在國內熱門論壇批踢踢的爆料，已引起網路世界關注，這篇爆料的內文描述，「{summary_1}」，令人震驚。",
+        "但這還沒完，{author}接著說：「{summary_2}」，驚呆眾人。",
+        "「{comment_1}」、「{comment_2}」、「{comment_3}」，鄉民紛紛關注，反應激烈。也有鄉民{comment_by_1}試圖總結：「{comment_summary_1}」。",
+        "最新熱門爆料，即時自動掌握，都在《記者快抄》。"
+]
+}

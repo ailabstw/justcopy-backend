@@ -1,0 +1,11 @@
+{
+    "summary_num" : 3,
+    "comment_num" : 4,
+    "Image": 0,
+    "title": "{title}",
+    "paragraphs":[
+        "[即時新聞/記者快抄] 批踢踢網友{author}發文表示，{summary_1}",
+        "根據批踢踢{board}板網友{author}表示，「{summary_2}」。{summary_3}",
+        "文章下方網友留言表示「{comment_1}」;「{comment_2}」; 「{comment_3}」。也有網友表示，「{comment_4}」"
+    ]
+}

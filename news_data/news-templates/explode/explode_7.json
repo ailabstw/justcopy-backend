@@ -1,0 +1,13 @@
+{
+    "summary_num": 2,
+    "comment_num": 5,
+    "title": "怎麼會！網路爆料「{title}」，內容竟然是⋯⋯",
+    "paragraphs": [
+        "「{comment_1}」！究竟{author}爆料了什麼樣的內容，讓網友發出這樣的回應？",
+        "今日稍早{time}，批踢踢爆出新八卦，標題醒目地寫著：「{title}」，迅速吸引眾人圍觀。",
+        "文章寫道：「{summary_1}」，令鄉民不禁說道：「{comment_2}」。",
+        "而接下來，爆料內容提到，「{summary_2}」，又讓人驚呼「{comment_3}」。",
+        "網友們紛紛留下評論，{comment_by_1}就說：「{comment_summary_1}」，而{comment_by_2}則表示：「{comment_summary_2}」。",
+        "網路世界新鮮爆料，記者快抄與您一同關注。"
+    ]
+}

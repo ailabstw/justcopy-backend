@@ -1,0 +1,13 @@
+{
+    "summary_num": 3,
+    "comment_num": 4,
+    "title": "熱門爆料，你聽說了嗎？「{title}」！",
+    "paragraphs": [
+        "PTT八卦版再起波瀾！台灣時間{time}，網友{author}的文章，迅速在網路論壇引起注目。",
+        "這篇標題為「{title}」的文章寫：「{summary_1}」，並且說",
+        "這樣的消息已引起網民注意，紛紛留下諸如{comment_1}」、「{comment_2}」的回應，但{author}的爆料還未結束。文章末尾寫著：「{summary_3}」，劃下句點。",
+        "「{comment_3}」，對這則爆料，鄉民還有什麼其他回應呢？",
+        "「{comment_summary_1}」，網友{comment_by_1}就這樣說。",
+        "您對這則熱門爆料，又有什麼看法呢？"
+    ]
+}
