@@ -31,7 +31,7 @@ sudo bash install.sh
 
 目前使用 ["Reading Wikipedia to Answer Open-Domain Questions", ACL 2017](https://github.com/facebookresearch/DrQA) 提供的 search engine 演算法來找適合的圖片。
 
-您可直接省略需要用到此DB的程式碼、跳過自動搜尋合適圖片的步驟，或來信與我們聯絡。
+您可直接省略需要用到此DB的程式碼、跳過自動搜尋合適圖片的步驟，或來信與我們聯絡取得`DOC`與`TFIDF_DATA`。
 
 ## About Auto Generated Articles
 
